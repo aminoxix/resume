@@ -1,0 +1,231 @@
+%-------------------------
+% Resume in Latex
+% Author: Anshumaan Kumar Prasad
+% Website: https://github.com/aminoxix/resume
+% License: MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\usepackage{xcolor}
+\hypersetup{colorlinks,urlcolor=blue}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% ----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+\usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+% \usepackage{times}
+% \usepackage{helvet}
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{#2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\project}[2]{
+\textbf{}{
+\href{#2}{{#1} \,\faExternalLink}
+}
+    \hfill
+}
+
+% Create project heading. Parameters: Name, link, Tech stack
+\newcommand{\projectHeading}[3]{\project{#1}{#2}
+{#3}\\ \vspace{-1pt}}
+
+\newcommand{\resumeItemHeading}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubHeading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemHeadingStart}{\begin{itemize}}
+\newcommand{\resumeItemHeadingEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+	\textbf{\href{}{\faUser ~ \Large Anshumaan Kumar Prasad}} & \faEnvelope ~ Email: \href{mailto:contact@aminoxix.me}{contact@aminoxix.me}\\
+	\faGlobe ~ \href{https://aminoxix.me/}{aminoxix.me} & \faPhone ~ Mobile: \href{tel:+91 9425200288}{+91-94252-00288} ~ ~ ~ ~\\
+\end{tabular*}
+
+% \begin{center}
+%     \small
+%     \faGithub \href{https://github.com/aminoxix}{\raisebox{-0.2\height}\ github.com/aminoxix} ~
+%     \faLinkedin \href{https://linkedin.com/in/aminoxix}{\raisebox{-0.2\height}\ linkedin.com/in/aminoxix} ~
+%     \vspace{-13pt}
+% \end{center}
+
+%-----------EDUCATION-----------------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubHeading
+{Shri Shankaracharya Technical Campus}{Bhilai, IN}
+{Bachelor of Technology in Information Technology;  GPA: 3.26 (7.7/10.0)}{Aug. 2019 -- July 2023}
+\resumeSubHeadingListEnd
+  
+%-----------EXPERIENCE-----------------
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeSubHeading
+{Pillar Project Worldwide Limited $|$ \href{https://pillar.fi}{pillar.fi}}{Remote, London \& Wales, ENG}
+{Junior Frontend Developer}{June 2022 - Nov 2022}
+\resumeItemListStart
+\resumeItem{Languages \& Tools: }{TypeScript, Next.js, React, Blocknative, Web3, Etherspot SDK, Zeplin, Linear App}
+\resumeItem{}
+{Agile mode, UK estimation, take part in agile ceremonies and daily dev standups}
+\resumeItem{Etherspot Dashboard: }{The \href{https://develop.etherspot.io}{Etherspot Dashboard} is an all-in-one, EVM-compatible platform that allows users to interact seamlessly with multiple assets and protocols — all without having to switch networks.}
+\resumeItemListStart
+\resumeItem{Notifications: }
+{Service for sending toast, push and in-app notifications involved in features such as transactions (send \& deposit), network switch and authentication.}
+\vspace{1.2pt}
+\resumeItem{Data Visualization: }
+{Representation of tokens to a whole of connected wallet in the form of the doughnut chart.}
+\resumeItem{UI Optimization: }
+{Developed loading state, Sentry Integration, Debugging dashboard \& fixing bugs.}
+\resumeItemListEnd
+\vspace{5pt}
+\resumeItem{Pillar Staking Website: }{A \href{https://ui-modifications.pillar-staking-frontend.pages.dev/}{staking website} to stake between 10,000 and 250,000 \$PLR to be eligible to receive rewards, built using smart contract via ABI (Application Binary Interface) interaction. Tokens staked are locked for a minimum period of 1 year. Rewards are paid out in wETH.}
+\vspace{3pt}
+\resumeItemListEnd
+
+\resumeSubHeading
+{Oibre Labs Private Limited $|$ \href{https://getmicro.co}{getmicro.co}}{Remote, Bangalore, IN}
+{Software Engineering Intern}{April 2022 - July 2022}
+\resumeItemListStart
+\resumeItem{Languages \& Tools: }{MongoDB, Express, Node, React, Tailwind CSS}
+\resumeItem{}
+{Worked on the Coming Soon page, Partner Portal and Beta Web Applications required for Fractional Investments}
+\resumeItem{}
+{Initiated Responsive Employee Management System (EMS)}
+\resumeItem{}
+{Collaborating with peers engineers \& figma designers to solve technical problems and merge requests}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+\resumeSubHeadingListStart
+\item{
+      \textbf{Tools: }{Vercel, Git, Railway, Linear, Zohodrive, Zeplin \& Figma}
+      \hfill
+      \textbf{Languages: }{Javascript, TypeScript \& Python}}
+\vspace{-7pt}
+\item{
+      \textbf{Frameworks: }{React, Node, Next, Tailwind \& Bootstrap}
+      \hfill
+      \textbf{Cloud: }{MongoDB Atlas \& Google Cloud}}
+\resumeSubHeadingListEnd
+ 
+%-----------PROJECTS-----------------
+\section{Projects}
+\projectHeading{\textbf{Toilwindo App (Task Manager)} $|$ Plain JS $+$ Tailwind CSS}{https://aminoxix.github.io/toilwindo}{Nov - Dec 2022}
+\vspace{-5pt}
+\resumeItemListStart
+\resumeItem{}{This website organises and manages to-do lists into appropriate categories.}
+\vspace{-5pt}
+\resumeItem{What I learnt: }{Vanilla JavaScript, Local Storage, Strings, Arrays \& their in-built methods}
+\resumeItemListEnd
+\vspace{6pt}
+\projectHeading{\textbf{Weather App} $|$ React $+$ Vite (pnpm)}{https://github.com/aminoxix/ClimateCheck}{Jan - Feb 2023}
+\vspace{-5pt}
+\resumeItemListStart
+\resumeItem{}{Get the national and local weather temperature with longitude \& latitude, implemented using OpenWeatherMap and Google Map API, Styled Components, Material UI \& Icons.}
+\vspace{-5pt}
+\resumeItem{What I learnt: }{Global State Management and hooks such as useEffect, useState \& useRef}
+\resumeItemListEnd
+
+%--------EXTRACURRICULAR ACTIVITY------------
+\section{Extracurricular Activity}
+\resumeSubHeadingListStart
+\resumeSubHeading
+{DEVSTRONS' $|$ \href{https://devstrons.org}{devstrons.org}}{Community}
+{Community Founder}{July 2021 - Present}
+\resumeItemListStart
+\resumeItem{}{Mentored 500+ people while holding positions such Postman Student Leader, CNCF Organizer, Hack Club Leader, and Blogger}
+\resumeItem{}{Introduced the first student-run debugging contest with a \href{https://bit.ly/bugtrons2-con}{conference}, BUGTRONS, to empower coders to get influenced by developing software, enhancing skills, eradicating bugs \& the pursuit of new prospects.}
+\resumeItemListEnd
+\vspace{2pt}
+\item{
+      \textbf{Open Source Contributions}{}
+      \vspace{-7pt}
+      \hfill
+      \textbf{}{Jan 2021 - Present}
+}
+\resumeItemListStart
+\item \href{https://github.com/jenkins-x/jx-docs/pull/3381}{{fix: [Docs/Bug] Mobile view updated} \,\faExternalLink}
+\vspace{-3pt}
+\item \href{https://github.com/meshery/meshery/pull/3070}{{[Docs] mesheryctl pattern delete page added} \,\faExternalLink}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
