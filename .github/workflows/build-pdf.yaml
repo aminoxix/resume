@@ -7,7 +7,6 @@ on:
         paths:
             - ".github/workflows/**"
             - "static/**"
-            - CNAME
             - "index.html"
             - "resume.tex"
     pull_request:
@@ -16,7 +15,6 @@ on:
         paths:
             - ".github/workflows/**"
             - "static/**"
-            - CNAME
             - "index.html"
             - "resume.tex"
     workflow_dispatch: # Allows manual execution of workflow
@@ -41,11 +39,13 @@ jobs:
               run: |
                   mkdir build 
                   cp -r static/ build/
-                  cp CNAME build/
                   cp favicon.ico build/
                   cp index.html build/
                   cp resume.pdf build/
                   mv "build/resume.pdf" "build/Résumé for Anshumaan Kumar Prasad.pdf"
+
+            - name: Mark repository as safe
+              run: git config --global --add safe.directory /__w/resume/resume
 
             - name: Git add
               run: git add "build/Résumé for Anshumaan Kumar Prasad.pdf"
