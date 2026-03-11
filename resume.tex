@@ -5,13 +5,13 @@
 % License: MIT
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper, 10pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
+\usepackage[usenames, dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[pdftex]{hyperref}
@@ -21,12 +21,14 @@
 \setlength{\multicolsep}{-3.0pt}
 \setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
+\pdfgentounicode=1
 
 \usepackage{xcolor}
-\hypersetup{colorlinks,urlcolor=black}
+\definecolor{accent}{HTML}{2B547E}
+\hypersetup{colorlinks, urlcolor=black}
 
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
@@ -35,8 +37,8 @@
 \addtolength{\oddsidemargin}{-0.6in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1.19in}
-\addtolength{\topmargin}{-0.7in}
-\addtolength{\textheight}{1.4in}
+\addtolength{\topmargin}{-0.75in}
+\addtolength{\textheight}{1.5in}
 
 \urlstyle{same}
 
@@ -45,54 +47,43 @@
 \setlength{\tabcolsep}{0in}
 
 % Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\titleformat{\section}{ \vspace{-6pt}\scshape\raggedright\large\color{accent} }{}{0em}{}[
+\color{accent}
+\titlerule
+\vspace{-6pt}
+]
 
 % ----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
 \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-% \usepackage{times}
-% \usepackage{helvet}
 
 %-------------------------
 % Custom commands
-\newcommand{\resumeItem}[2]{
-  \item\small{
-    \textbf{#1}{#2 \vspace{-6pt}}
-  }
+\newcommand{\resumeItem}[2]{ \item\small{ \textbf{#1}{#2 \vspace{-4pt}} } }
+
+% Project sub-label inside an experience entry
+\newcommand{\resumeProjectLabel}[1]{%
+\par
+\vspace{2pt}%
+{\small\textbf{#1}}\par%
+\vspace{-8pt}%
 }
 
-\newcommand{\project}[2]{
-\textbf{}{
-\href{#2}{{#1} \,\faExternalLink}
-}
-    \hfill
-}
+\newcommand{\project}[2]{ \textbf{}{ \href{#2}{{#1} \,\faExternalLink} } \hfill }
 
 % Create project heading. Parameters: Name, link, Tech stack
-\newcommand{\projectHeading}[3]{\project{#1}{#2}
-{#3}\\ \vspace{-1pt}}
+\newcommand{\projectHeading}[3]{\project{#1}{#2} {#3}\\
+\vspace{-1pt}}
 
-\newcommand{\resumeItemHeading}[2]{
-  \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
-  }
+\newcommand{\resumeItemHeading}[2]{ \item\small{ \textbf{#1}{: #2 \vspace{-2pt}} }
 }
 
 \newcommand{\resumeSubHeading}[4]{
-    \vspace{-1pt}
-    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+\vspace{-1pt}
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+	\textbf{#1}       & #2                 \\
+	\textit{\small#3} & \textit{\small #4} \\
+\end{tabular*}
+\vspace{-5pt}
 }
 
 \renewcommand{\labelitemii}{$\circ$}
@@ -100,153 +91,98 @@
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemHeadingStart}{\begin{itemize}}
-\newcommand{\resumeItemHeadingEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemHeadingEnd}{\end{itemize}
+\vspace{-5pt}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}
+\vspace{-5pt}}
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 \begin{document}
+	%----------HEADING-----------------
+	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+		\textbf{\href{}{\faUser ~ \Large Anshumaan Kumar Prasad}}        & \faEnvelope ~ Email: \href{mailto:aminoxix@icloud.com}{aminoxix@icloud.com} \\
+		\faGlobe ~ \href{https://dev.iflyrich.space}{Personal Portfolio} & \faPhone ~ Mobile: \href{tel:+91 9425200288}{+91-94252-00288} ~ ~ ~ \\
+	\end{tabular*}
 
-%----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-	\textbf{\href{}{\faUser ~ \Large Anshumaan Kumar Prasad}} & \faEnvelope ~ Email: \href{mailto:aminoxix@icloud.com}{aminoxix@icloud.com}\\
-	\faGlobe ~ \href{https://aminoxix.vercel.app/}{aminoxix.vercel.app} & \faPhone ~ Mobile: \href{tel:+91 9425200288}{+91-94252-00288} ~ ~ ~ ~\\
-\end{tabular*}
-% \vspace{-7 pt}
-% \begin{center}
-%     \small
-%     \faGithub \href{https://github.com/aminoxix}{\raisebox{-0.2\height}\ github.com/aminoxix} ~
-%     \faLinkedin \href{https://linkedin.com/in/aminoxix}{\raisebox{-0.2\height}\ linkedin.com/in/aminoxix} ~
-%     \vspace{-13pt}
-% \end{center}
+	%-----------EXPERIENCE-----------------
+	\section{Experience}
 
-%-----------EXPERIENCE-----------------
-\section{Experience}
-% \resumeSubHeadingListStart
+	\resumeSubHeading {IntelXLabs Private Limited (NEXtech) $|$ \href{https://www.intelxlabs.com}{intelxlabs.com}}{Remote, Surat, India}{Senior Frontend Engineer (Frontend Engineer II)}{Sept 2024 - Present}
+	\resumeProjectLabel{HaaNaa} \resumeItemListStart \resumeItem{}
+	{Built \& maintained a responsive dashboard web-application scaled to 20K daily users; optimized API performance via selective endpoint calls, reducing database load and response time by 50\%.}
+	\resumeItem{} {Implemented conditional side menu rendering by integrating IAM-based RBAC in the Go backend, ensuring user permissions are fetched and applied at initial dashboard load.}
+	\resumeItemListEnd \resumeProjectLabel{HOAShare} \resumeItemListStart
+	\resumeItem{} {Created a reusable real-time chat SDK (@hoa/stream-chat) powering multiple production apps --- architecting singleton connections, channel pagination, Lexical-based rich messaging, voice recording, and S3 media pipelines; reduced bundle size by $\sim$60\% and eliminated redundant WebSocket connections across 18+ components.}
+	\resumeItem{}
+	{Institutionalized error-handling and type-safety practices via deep audit of the communication layer --- standardized 40+ boundaries with tuple-based failure handling, significantly improving reliability and maintainability.}
+	\resumeItemListEnd
+	\vspace{8pt}
+	\resumeSubHeading
+	{Xamtac Consulting LLC $|$ \href{https://xamtac.com}{xamtac.com}}{Remote, Chicago, Illinois}
+	{Mid-level Frontend Developer}{Jun 2023 - Jul 2024} \resumeItemListStart
+	\resumeItem{} {Engineered a comprehensive SaaS solution for marketing agencies, featuring streamlined client onboarding, campaign planning, and communication generation; enhanced lead conversion rates by 25\% and reduced operational workload by 35\%.}
+	\resumeItem{}
+	{Collaborated with peer engineers and UI/UX designers to debug and resolve technical issues, merging 50+ pull requests monthly, reducing system downtime by 20\% and improving user satisfaction by 15\%.}
+	\resumeItemListEnd
+	\vspace{8pt}
+	\resumeSubHeading
+	{Pillar Project Worldwide Limited (Etherspot) $|$ \href{https://pillar.fi}{pillar.fi}}{Remote, London \& Wales, ENG}{Junior Frontend Developer}{Jun 2022 - Nov 2022}
+	\resumeItemListStart \resumeItem{}
+	{Shipped notification toast, network switches, authentication, interactive token data visualization using doughnut charts, optimized UI via loading state enhancements, Sentry integration \& more --- improved user engagement by 40\%.}
+	\resumeItem{Pillar Staking: }{Initiated an in-house \href{https://ui-modifications.pillar-staking-frontend.pages.dev/}{staking website} to stake \$PLR tokens via ABI interaction with rewards distributed in wETH.}
+	\resumeItemListEnd
 
-\resumeSubHeading
-{IntelXLabs Private Limited $|$ \href{https://www.intelxlabs.com}{intelxlabs.com}}{Remote, Surat, India}{Senior Frontend Engineer - II}{Sept 2024 - Present}
-\resumeItemListStart
-% \resumeItem{Languages \& Tools: }{TypeScript, Next.js, Mantine UI, React, Tailwind CSS, tRPC, Asana}
-\resumeItem{}
-{Building \& maintaining a responsive robust dashboard web-application solution that scaled to 20K daily users; optimized API performance by selectively calling category or subcategory specific endpoints instead of fetching all data at once, reduced database load and API response time by 50\%.}
-\resumeItem{}
-{Implemented conditional rendering for the side menu by integrating IAM-based role-based access control (RBAC) in the Go backend, ensuring user permissions are fetched and applied at the initial dashboard load.}
-\resumeItemListEnd
-\vspace{10pt}
-\resumeSubHeading
-{Xamtac Consulting LLC $|$ \href{https://xamtac.com}{xamtac.com}}{Remote, Chicago, Illinois}
-{Mid-level Frontend Developer}{Jun 2023 - Jul 2024}
-\resumeItemListStart
-% \resumeItem{Languages \& Tools: }{TypeScript, Next.js, Mantine UI, React, Tailwind CSS, tRPC, Asana}
-\resumeItem{}
-{Engineered a comprehensive SaaS solution for marketing agencies, featuring streamlined client onboarding, campaign planning, and communication generation; enhanced lead conversion rates by 25\% and reduced operational workload by 35\% with certain automation.}
-% \resumeItem{}
-% {Initiating and supporting customized client solutions for diverse products and services, resulting in a remarkable 10x improvement in productivity.}
-\resumeItem{}
-{Collaborated with peer engineers and UI/UX designers to debug and resolve technical issues, successfully merging 50+ pull requests monthly, thereby reducing system downtime by 20\% and improving user satisfaction by 15\%}
-\resumeItemListEnd
-\vspace{10pt}
-\resumeSubHeading
-{Pillar Project Worldwide Limited $|$ \href{https://pillar.fi}{pillar.fi}}{Remote, London \& Wales, ENG}{Junior Frontend Developer}{Jun 2022 - Nov 2022}
-\resumeItemListStart
-% \resumeItem{Languages \& Tools: }{TypeScript, Next.js, React, Blocknative, Web3, Etherspot SDK, Zeplin, Linear App}
-% \resumeItem{}
-% {Agile mode, UK estimation, participate in agile ceremonies and daily dev standups}
-% \resumeItem{Etherspot Dashboard: }{The \href{https://develop.etherspot.io}{Etherspot Dashboard} is an all-in-one, EVM-compatible platform that allows users to interact seamlessly with multiple assets and protocols — all without having to switch networks.}
-% \resumeItemListStart
-% \resumeItem{}
-% {Led the creation of a robust notifications service handling toast, push, and in-app notifications for features like transactions, network switches, and authentication.}
-\resumeItem{}
-{Shipped features like notification toast, network switches, authentication, interactive tokens data visualization system using doughnut charts within connected wallets, optimized UI through loading state enhancements, Sentry integration \& more, that improved user engagement by 40\%.}
-% \resumeItemListEnd
-\resumeItem{Pillar Staking Website: }{Initiated an in-house \href{https://ui-modifications.pillar-staking-frontend.pages.dev/}{staking website} to stake \$PLR tokens via ABI (Application Binary Interface) interaction with rewards distributed in wETH.}
-\vspace{2pt}
-\resumeItemListEnd
-% \resumeSubHeadingListEnd
+	%--------PROGRAMMING SKILLS------------
+	\section{Programming Skills}
+	\begin{itemize}[leftmargin=0pt, label={}]
+		\item \small{ \textbf{Languages: }{Go, JavaScript \& TypeScript} \hfill \textbf{Frameworks: }{React, Node, Next, Tailwind, Mantine \& Bootstrap} }
+	\end{itemize}
+	\vspace{-18pt}
+	\begin{itemize}[leftmargin=0pt, label={}]
+		\item \small{ \textbf{Cloud: }{MongoDB Atlas, GCP, Azure \& Amazon S3} \hfill \textbf{Tools: }{Vercel, Railway, tRPC, PostgreSQL, MySQL \& Figma} }
+	\end{itemize}
+	\vspace{-13pt}
 
-%--------PROGRAMMING SKILLS------------
-\section{Programming Skills}
-% \resumeSubHeadingListStart
-\begin{itemize}
-	\item{
-	      \textbf{Languages: }{Go, JavaScript \& TypeScript}
-	      \hfill
-	      \textbf{Frameworks: }{React, Node, Next, Tailwind, Mantine \& Bootstrap}
-	}
-\end{itemize}
-\vspace{-20pt}
-\begin{itemize}
-	\item{
-	      \textbf{Cloud: }{MongoDB Atlas, GCP, Azure \& Amazon S3}
-	      \hfill
-	      \textbf{Tools: }{Vercel, Railway, tRPC, PostgreSQL, MySQL \& Figma}
-	}
-\end{itemize}     
-\vspace{-13pt}
-% \resumeSubHeadingListEnd
-%-----------PROJECTS-----------------
-\section{Projects}
-\vspace{2pt}
-\projectHeading{\textbf{fmgr} $|$ Next.js $+$ tRPC $+$ Drizzle ORM $+$ Supabase $+$ UploadThing}{https://fmgr.vercel.app}{\textit{\small{Aug 2024}}}
-\vspace{-5pt}
-\resumeItemListStart
-\resumeItem{}{Streamlined DMS with responsive layouts, modern navigation, \& key features - enhanced UX by 20\%.}
-\vspace{0pt}
-\resumeItem{}{Developed and integrated a nested folder structure with advanced search and timeline tracking, significantly improving file organization and retrieval efficiency.}
-\resumeItemListEnd
-\vspace{9pt}
-\projectHeading{\textbf{Customer Relationship Managment Dashboard} $|$ Next.js $+$ tRPC $+$ Prisma ORM $+$ Neon DB}{https://github.com/aminoxix/crm}{\textit{\small{Mar 2024}}}
-\vspace{-5pt}
-\resumeItemListStart
-\resumeItem{}{Implemented a CRM system with file upload capability, boosting interaction efficiency by 25\%.}
-\vspace{0pt}
-\resumeItem{What I learnt: }{Full stack development with TypeScript, IaaS \& AWS Cloud Storage}
-\resumeItemListEnd
-\vspace{-2pt}
+	%-----------PROJECTS-----------------
+	\section{Projects}
+	\vspace{2pt}
+	\projectHeading{\textbf{fmgr} $|$ Next.js $+$ tRPC $+$ Drizzle ORM $+$ Supabase $+$ UploadThing}{https://fmgr.vercel.app}{\textit{\small{Aug 2024}}}
+	\vspace{-5pt}
+	\resumeItemListStart \resumeItem{}{Streamlined DMS with responsive layouts, modern navigation, \& key features --- enhanced UX by 20\%.}
+	\resumeItem{}{Developed nested folder structure with advanced search and timeline tracking, improving file organization and retrieval efficiency.}
+	\resumeItemListEnd
+	\vspace{3pt}
+	\projectHeading{\textbf{CRM Dashboard} $|$ Next.js $+$ tRPC $+$ Prisma ORM $+$ Neon DB}{https://github.com/aminoxix/crm}{\textit{\small{Mar 2024}}}
+	\vspace{-5pt}
+	\resumeItemListStart \resumeItem{}{Implemented a CRM system with file upload capability, boosting interaction efficiency by 25\%.}
+	\resumeItemListEnd
+	\vspace{-2pt}
 
-%-----------EDUCATION-----------------
-\section{Education}
-% \resumeSubHeadingListStart
-\resumeSubHeading
-{Shri Shankaracharya Technical Campus}{Bhilai, IN}
-{Bachelor of Technology in Information Technology}{Aug 2019 -- Jul 2023}
-% \resumeSubHeadingListEnd
-\vspace{-4pt}
+	%-----------EDUCATION-----------------
+	\section{Education}
+	\resumeSubHeading {Shri Shankaracharya Technical Campus}{Bhilai, IN}
+	{Bachelor of Technology in Information Technology}{Aug 2019 -- Jul 2023}
+	\vspace{-4pt}
 
-%--------EXTRACURRICULAR ACTIVITY------------
-\section{Extracurricular Activity}
-% \resumeSubHeadingListStart
-\resumeSubHeading
-{DEVSTRONS' $|$ \href{https://devstrons.org}{devstrons.org}}{Community}
-{Community Founder}{Jul 2021 - May 2023}
-\resumeItemListStart
-\resumeItem{}{Mentored 500+ folks holding responsibilities such as GitHub Campus Expert \& Postman Student Leader}
-\resumeItem{}{Introduced the first student-run debugging contest with a \href{https://bit.ly/bugtrons2-con}{conference}, \href{https://bugtrons.netlify.app}{{BUGTRONS} \,\faExternalLink}}
-\resumeItemListEnd
-\vspace{6pt}
+	%--------EXTRACURRICULAR ACTIVITY------------
+	\section{Extracurricular Activity}
+	\resumeSubHeading {DEVSTRONS' $|$ \href{https://devstrons.org}{devstrons.org}}{Community}
+	{Community Founder}{Jul 2021 - May 2023} \resumeItemListStart \resumeItem{}{Mentored 500+ folks holding responsibilities such as GitHub Campus Expert \& Postman Student Leader}
+	\resumeItem{}{Introduced the first student-run debugging contest with a \href{https://bit.ly/bugtrons2-con}{conference}, \href{https://bugtrons.netlify.app}{{BUGTRONS} \,\faExternalLink}}
+	\resumeItemListEnd
+	\vspace{6pt}
 
-\textbf{Contributions}{}
-\vspace{-7pt}
-\hfill
-\textbf{}{Open Source}
-\resumeItemListStart
-\vspace{4pt}
-\resumeItem{}{
-	\href{https://github.com/jenkins-x/jx-docs/pull/3381}{{fix: [Docs/Bug] Mobile view updated} \,\faExternalLink}
-	\hfill
-	\textbf{jenkins-x}
-}
-\resumeItem{}{
-	\href{https://github.com/meshery/meshery/pull/3070}{{[Docs] mesheryctl pattern delete page added} \,\faExternalLink}
-	\hfill
-	\textbf{meshery}
-}
-\resumeItemListEnd
-% \resumeSubHeadingListEnd
+	\textbf{Contributions}{}
+	\vspace{-7pt}
+	\hfill \textbf{}{Open Source} \resumeItemListStart
+	\vspace{4pt}
+	\resumeItem{}{ \href{https://github.com/jenkins-x/jx-docs/pull/3381}{{fix: [Docs/Bug] Mobile view updated} \,\faExternalLink} \hfill \textbf{jenkins-x} }
+	\resumeItem{}{ \href{https://github.com/meshery/meshery/pull/3070}{{[Docs] mesheryctl pattern delete page added} \,\faExternalLink} \hfill \textbf{meshery} }
+	\resumeItem{}{ \href{https://github.com/asyncapi/website/pull/4127}{{feat: community layout \& board page} \,\faExternalLink} \hfill \textbf{asyncapi} }
+	\resumeItemListEnd
 
-%-------------------------------------------
+	%-------------------------------------------
 \end{document}
